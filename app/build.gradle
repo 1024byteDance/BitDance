@@ -7,7 +7,7 @@ android {
 
     signingConfigs {//签名
         appkey {
-            storeFile file('D:\\Data\\BitDance.jks')
+            storeFile file('BitDance.jks')
             storePassword 'qiujincheng'
             keyAlias 'BitDanceKey'
             keyPassword 'qiujincheng'
