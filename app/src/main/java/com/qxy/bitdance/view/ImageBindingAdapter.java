@@ -9,6 +9,7 @@ import com.qxy.bitdance.R;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+//图片dataBinding适配器
 public class ImageBindingAdapter {
 
     private static final ExecutorService executors = Executors.newFixedThreadPool(3);

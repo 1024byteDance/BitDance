@@ -14,6 +14,7 @@ import com.qxy.bitdance.databinding.ListItemMovieBinding;
 
 import java.util.List;
 
+//电影榜单适配器
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>{
 
     private final List<RankItem> dates;

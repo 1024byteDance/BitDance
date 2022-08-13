@@ -20,6 +20,7 @@ import com.qxy.bitdance.view.filmlist.adapter.MovieAdapter;
 
 import io.reactivex.disposables.CompositeDisposable;
 
+//电影榜单Fragment
 public class MovieFragment extends Fragment {
 
 

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import com.qxy.bitdance.databinding.ActivityRankBinding;
 import com.qxy.bitdance.view.filmlist.fragment.MovieFragment;
 
+//榜单Activity类
 public class FilmListActivity extends AppCompatActivity {
 
     ActivityRankBinding binding;

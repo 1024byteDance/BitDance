@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import java.util.List;
 
+//主界面ViewPager适配器类
 public class MainLayoutAdapter extends FragmentStateAdapter {
 
     private final List<Fragment> list;

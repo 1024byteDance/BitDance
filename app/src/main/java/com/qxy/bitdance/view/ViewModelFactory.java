@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.qxy.bitdance.factory.RepositoryFactory;
 import com.qxy.bitdance.view.filmlist.fragment.MovieViewModel;
 
+//ViewModel工厂类
 public class ViewModelFactory implements ViewModelProvider.Factory {
 
     public static ViewModelFactory provide(Context context) {

@@ -12,6 +12,7 @@ import com.qxy.bitdance.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 import java.util.List;
 
+//主界面Activity
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
