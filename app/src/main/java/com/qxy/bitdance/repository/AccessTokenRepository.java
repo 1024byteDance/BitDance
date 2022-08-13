@@ -1,6 +1,6 @@
 package com.qxy.bitdance.repository;
 
-import com.qxy.bitdance.MainActivity;
+import com.qxy.bitdance.MyApplication;
 import com.qxy.bitdance.dataSource.AccessTokenDataSource;
 import com.qxy.bitdance.database.dao.AccessTokenDao;
 import com.qxy.bitdance.database.domain.AccessToken;
@@ -55,8 +55,8 @@ public class AccessTokenRepository implements AccessTokenDataSource {
     public Observable<AccessToken> requestAccessToken(String authCode) {
         Retrofit retrofit = NetWorkFactory.provideRetrofit();
         TokenService tokenService = retrofit.create(TokenService.class);
-        return tokenService.getAccessToken(MainActivity.clientSecret, authCode
-                        , "authorization_code", MainActivity.clientkey)
+        return tokenService.getAccessToken(MyApplication.clientSecret, authCode
+                        , "authorization_code", MyApplication.clientkey)
                 .compose(ResponseTransformer.obtain())
                 .map(data -> {
                     // 保存AccessToken

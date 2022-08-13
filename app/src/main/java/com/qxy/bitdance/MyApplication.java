@@ -8,7 +8,7 @@ import android.os.Bundle;
 import com.bytedance.sdk.open.douyin.DouYinOpenApiFactory;
 import com.bytedance.sdk.open.douyin.DouYinOpenConfig;
 
-public class MainActivity extends Application {
+public class MyApplication extends Application {
 
     //Client Key
     public static final String clientkey = "aw8vkj85mfe2pkc6";

@@ -1,6 +1,6 @@
 package com.qxy.bitdance.repository;
 
-import com.qxy.bitdance.MainActivity;
+import com.qxy.bitdance.MyApplication;
 import com.qxy.bitdance.dataSource.ClientTokenDataSource;
 import com.qxy.bitdance.database.dao.ClientTokenDao;
 import com.qxy.bitdance.database.domain.ClientToken;
@@ -58,7 +58,7 @@ public class ClientTokenRepository implements ClientTokenDataSource {
     public Observable<ClientToken> requestClientToken() {
         Retrofit retrofit = NetWorkFactory.provideRetrofit();
         TokenService tokenService = retrofit.create(TokenService.class);
-        return tokenService.getClientToken(MainActivity.clientkey,MainActivity.clientSecret,"client_credential")
+        return tokenService.getClientToken(MyApplication.clientkey, MyApplication.clientSecret,"client_credential")
                 .compose(ResponseTransformer.obtain())
                 .map(data -> {
                     // 保存AccessToken
