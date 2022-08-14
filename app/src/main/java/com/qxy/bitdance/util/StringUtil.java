@@ -17,4 +17,11 @@ public class StringUtil {
         return sb.toString();
     }
 
+    public static String  numNarrow(long l) {
+        if (l < 10000) {
+            return String.valueOf(l);
+        } else {
+            return String.format("%.1f万",l / 10000.0);
+        }
+    }
 }

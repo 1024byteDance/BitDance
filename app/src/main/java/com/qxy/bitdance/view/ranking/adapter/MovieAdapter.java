@@ -11,11 +11,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.qxy.bitdance.R;
 import com.qxy.bitdance.database.domain.RankItem;
 import com.qxy.bitdance.databinding.ListItemMovieBinding;
+import com.qxy.bitdance.view.ranking.BaseRanking;
+import com.qxy.bitdance.view.ranking.movie.Movie;
 
 import java.util.List;
 
 //电影榜单适配器
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>{
+public class MovieAdapter extends RecyclerView.Adapter<BaseRanking>{
 
     private final List<RankItem> dates;
 
@@ -25,13 +27,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>
 
     @NonNull
     @Override
-    public MovieHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BaseRanking onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_movie, parent, false);
-        return new MovieHolder(itemView);
+        return new Movie(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MovieHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BaseRanking holder, int position) {
         holder.bind(dates.get(position));
     }
 
@@ -40,19 +42,5 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieHolder>
         return dates.size();
     }
 
-    public static class MovieHolder extends RecyclerView.ViewHolder {
-
-        ListItemMovieBinding binding;
-
-        public MovieHolder(@NonNull View itemView) {
-            super(itemView);
-            binding = DataBindingUtil.bind(itemView);
-        }
-
-        private void bind(RankItem rankItem) {
-            binding.setMovie(rankItem);
-        }
-
-    }
 
 }
