@@ -13,7 +13,7 @@ public class MainLayoutAdapter extends FragmentStateAdapter {
 
     private final List<Fragment> list;
 
-    public MainLayoutAdapter(List<Fragment> list, @NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+    public MainLayoutAdapter(List<Fragment> list,@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
         super(fragmentManager, lifecycle);
         this.list = list;
     }

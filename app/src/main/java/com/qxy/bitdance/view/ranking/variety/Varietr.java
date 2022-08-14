@@ -1,4 +1,4 @@
-package com.qxy.bitdance.view.ranking.tv;
+package com.qxy.bitdance.view.ranking.variety;
 
 import android.view.View;
 
@@ -6,14 +6,13 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
 import com.qxy.bitdance.database.domain.RankItem;
-import com.qxy.bitdance.databinding.ListItemMovieBinding;
-import com.qxy.bitdance.databinding.ListItemTvBinding;
+import com.qxy.bitdance.databinding.ListItemVarietrBinding;
 import com.qxy.bitdance.view.ranking.BaseRanking;
 
-public class Tv extends BaseRanking {
-    ListItemTvBinding binding;
+public class Varietr extends BaseRanking {
+    ListItemVarietrBinding binding;
 
-    public Tv(@NonNull View itemView) {
+    public Varietr(@NonNull View itemView) {
         super(itemView);
         binding = DataBindingUtil.bind(itemView);
     }

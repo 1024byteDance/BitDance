@@ -26,15 +26,10 @@ public class FilmListActivity extends AppCompatActivity {
     private void loadFragment() {
         int type = getIntent().getIntExtra("type",1);
         int version = getIntent().getIntExtra("version",0);
-        Fragment fragment = null;
-        if (type == 1) { // 电影榜单
-            fragment = MovieFragment.newInstance(version);
-        }
-        if (fragment != null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(binding.fragment.getId(), fragment)
-                    .commit();
-        }
+        Fragment fragment = MovieFragment.newInstance(type, version);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(binding.fragment.getId(), fragment)
+                .commit();
     }
 }

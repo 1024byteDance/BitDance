@@ -18,8 +18,8 @@ public class MovieViewModel extends ViewModel {
         this.rankItemRepository = rankItemRepository;
     }
 
-    public Maybe<List<RankItem>> getRankList(int version) {
-        return rankItemRepository.queryMovie(1,version);
+    public Maybe<List<RankItem>> getRankList(int type, int version) {
+        return rankItemRepository.queryMovie(type, version);
     }
 
 }
