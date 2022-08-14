@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="centerCrop"
-            app:srcCompat="@{movie.poster,default = `@drawable/ic_img_load_fail`}" />
+            app:srcCompat="@{movie.poster}" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -55,8 +55,37 @@
                 android:textColor="@color/textO_on_white_body"
                 android:visibility="@{movie.nameEn.length() > 0 ? View.VISIBLE : View.GONE}"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/text_directors"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{`导演:` + StringUtil.arrayToString(movie.directors),default = `导演`}"
+                    android:textColor="@color/textO_on_white_body"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+                <TextView
+                    android:id="@+id/text_tags"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{StringUtil.arrayToStringTop5(movie.tags),default = `标签`}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="@color/textO_on_white_body"
+                    android:visibility="@{movie.tags.length > 0 ? View.VISIBLE : View.INVISIBLE}" />
+
+            </LinearLayout>
+
             <TextView
-                android:id="@+id/text_directors"
+                android:id="@+id/text_actors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -65,17 +94,6 @@
                 android:singleLine="true"
                 android:ellipsize="end"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
-
-            <TextView
-                android:id="@+id/text_tags"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="@{StringUtil.arrayToString(movie.tags),default = `剧情`}"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                android:textColor="@color/textO_on_white_body"
-                android:visibility="@{movie.tags.length > 0 ? View.VISIBLE : View.INVISIBLE}" />
-
 
 
             <LinearLayout
@@ -116,9 +134,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@{StringUtil.numNarrow(movie.discussionHot),default = `0`}"
+                    android:text="@{StringUtil.numNarrow(movie.discussionHot) + `(讨论)`,default = `0`}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     android:textColor="@color/textO_on_white_body"
+                    app:drawableLeftCompat="@drawable/ic_hot"
+                    app:drawableTint="@color/textO_on_white_body" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{StringUtil.numNarrow(movie.hot) + `(主题)`,default = `0`}"
+                    android:textColor="@color/textO_on_white_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    app:drawableLeftCompat="@drawable/ic_hot"
+                    app:drawableTint="@color/textO_on_white_body" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{StringUtil.numNarrow(movie.searchHot) + `(搜索)`,default = `0`}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="@color/textO_on_white_body"
+                    app:drawableLeftCompat="@drawable/ic_hot"
+                    app:drawableTint="@color/textO_on_white_body" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@{StringUtil.numNarrow(movie.topicHot) + `(影响)`,default = `0`}"
+                    android:textColor="@color/textO_on_white_body"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     app:drawableLeftCompat="@drawable/ic_hot"
                     app:drawableTint="@color/textO_on_white_body" />
 
