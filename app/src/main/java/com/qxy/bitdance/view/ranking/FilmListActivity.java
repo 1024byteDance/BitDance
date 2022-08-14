@@ -1,4 +1,4 @@
-package com.qxy.bitdance.view.filmlist;
+package com.qxy.bitdance.view.ranking;
 
 import android.os.Bundle;
 
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.qxy.bitdance.databinding.ActivityRankBinding;
-import com.qxy.bitdance.view.filmlist.fragment.MovieFragment;
+import com.qxy.bitdance.view.ranking.fragment.MovieFragment;
 
 //榜单Activity类
 public class FilmListActivity extends AppCompatActivity {

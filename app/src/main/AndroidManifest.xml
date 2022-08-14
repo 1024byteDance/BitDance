@@ -42,7 +42,7 @@
         android:exported="true">
     </activity>
 
-    <activity android:name=".view.filmlist.FilmListActivity"
+    <activity android:name=".view.ranking.FilmListActivity"
         android:exported="false"/>
 
     </application>

@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.qxy.bitdance.view.main.adapter.MainLayoutAdapter;
-import com.qxy.bitdance.view.main.fragment.RankFragment;
+import com.qxy.bitdance.view.main.fragment.RankingFragment;
 import com.qxy.bitdance.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         if (adapter == null) {
             List<Fragment> list = new ArrayList<>();
-            list.add(RankFragment.newInstance());
+            list.add(RankingFragment.newInstance());
             adapter = new MainLayoutAdapter(list, getSupportFragmentManager(), getLifecycle());
             binding.viewPager2.setAdapter(adapter);
         }

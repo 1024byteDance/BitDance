@@ -1,4 +1,4 @@
-package com.qxy.bitdance.view.filmlist.fragment;
+package com.qxy.bitdance.view.ranking.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import com.qxy.bitdance.databinding.FragmentMovieBinding;
 import com.qxy.bitdance.network.exception.ErrorConsumer;
 import com.qxy.bitdance.network.exception.NetException;
 import com.qxy.bitdance.view.ViewModelFactory;
-import com.qxy.bitdance.view.filmlist.adapter.MovieAdapter;
+import com.qxy.bitdance.view.ranking.adapter.MovieAdapter;
 
 import io.reactivex.disposables.CompositeDisposable;
 

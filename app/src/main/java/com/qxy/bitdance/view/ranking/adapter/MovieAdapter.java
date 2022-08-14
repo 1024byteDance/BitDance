@@ -1,4 +1,4 @@
-package com.qxy.bitdance.view.filmlist.adapter;
+package com.qxy.bitdance.view.ranking.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;

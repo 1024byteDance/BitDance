@@ -11,15 +11,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.qxy.bitdance.databinding.FragmentRankBinding;
-import com.qxy.bitdance.view.filmlist.FilmListActivity;
+import com.qxy.bitdance.view.ranking.FilmListActivity;
 
 //榜单页面Fragment
-public class RankFragment extends Fragment {
+public class RankingFragment extends Fragment {
 
     private FragmentRankBinding binding;
 
-    public static RankFragment newInstance() {
-        return new RankFragment();
+    public static RankingFragment newInstance() {
+        return new RankingFragment();
     }
 
     @Override

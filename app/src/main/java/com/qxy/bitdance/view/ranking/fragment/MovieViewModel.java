@@ -1,4 +1,4 @@
-package com.qxy.bitdance.view.filmlist.fragment;
+package com.qxy.bitdance.view.ranking.fragment;
 
 import androidx.lifecycle.ViewModel;
 
