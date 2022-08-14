@@ -14,7 +14,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
 // 请求过程线程调度封装
-public class ResponseTransformer<T extends DouYinBaseData> implements ObservableTransformer<DouYinResponse<T>, T> {
+public class ResponseTransformer<T extends DouyinBaseData> implements ObservableTransformer<DouyinResponse<T>, T> {
 
     private CompositeDisposable compositeDisposable;
 
@@ -27,7 +27,7 @@ public class ResponseTransformer<T extends DouYinBaseData> implements Observable
 
     @NonNull
     @Override
-    public ObservableSource<T> apply(Observable<DouYinResponse<T>> upstream) {
+    public ObservableSource<T> apply(Observable<DouyinResponse<T>> upstream) {
         return upstream
                 .doOnSubscribe(disposable -> {
                     if (compositeDisposable != null) {
@@ -37,7 +37,7 @@ public class ResponseTransformer<T extends DouYinBaseData> implements Observable
                 .onErrorResumeNext(throwable -> {
                     return Observable.error(NetException.handleException(throwable));
                 })
-                .flatMap((Function<DouYinResponse<T>, ObservableSource<T>>) tDouYinResponse -> {
+                .flatMap((Function<DouyinResponse<T>, ObservableSource<T>>) tDouYinResponse -> {
                     T data = tDouYinResponse.getData();
                     System.out.println("data:" + data);
                     // 请求成功
@@ -56,11 +56,11 @@ public class ResponseTransformer<T extends DouYinBaseData> implements Observable
     /**
      * 获取ResponseTransformer
      */
-    public static <U extends DouYinBaseData> ResponseTransformer<U> obtain(CompositeDisposable compositeDisposable) {
+    public static <U extends DouyinBaseData> ResponseTransformer<U> obtain(CompositeDisposable compositeDisposable) {
         return new ResponseTransformer<>(compositeDisposable);
     }
 
-    public static <U extends DouYinBaseData> ResponseTransformer<U> obtain() {
+    public static <U extends DouyinBaseData> ResponseTransformer<U> obtain() {
         return new ResponseTransformer<>();
     }
 }

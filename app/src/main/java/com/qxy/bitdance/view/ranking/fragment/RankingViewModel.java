@@ -10,11 +10,11 @@ import java.util.List;
 import io.reactivex.Maybe;
 
 //电影榜单ViewModel
-public class MovieViewModel extends ViewModel {
+public class RankingViewModel extends ViewModel {
 
     private final RankItemRepository rankItemRepository;
 
-    public MovieViewModel(RankItemRepository rankItemRepository) {
+    public RankingViewModel(RankItemRepository rankItemRepository) {
         this.rankItemRepository = rankItemRepository;
     }
 

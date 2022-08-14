@@ -6,10 +6,10 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 
 import com.qxy.bitdance.database.domain.RankItem;
-import com.qxy.bitdance.databinding.ListItemMovieBinding;
 import com.qxy.bitdance.databinding.ListItemTvBinding;
 import com.qxy.bitdance.view.ranking.BaseRanking;
 
+//电视榜单
 public class Tv extends BaseRanking {
     ListItemTvBinding binding;
 

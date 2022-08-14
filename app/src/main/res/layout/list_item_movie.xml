@@ -49,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@{`导演:` + StringUtil.arrayToString(movie.directors),default = `导演`}"
+                android:text="@{`演员:` + StringUtil.arrayToStringTop5(movie.actors),default = `演员`}"
                 android:textColor="@color/textO_on_white_body"
                 android:singleLine="true"
                 android:ellipsize="end"
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="@{StringUtil.arrayToString(movie.tags),default = `剧情`}"
+                android:text="@{StringUtil.arrayToStringTop5(movie.tags),default = `剧情`}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                 android:textColor="@color/textO_on_white_body"
                 android:visibility="@{movie.tags.length > 0 ? View.VISIBLE : View.INVISIBLE}" />
@@ -105,62 +105,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@{StringUtil.numNarrow(movie.discussionHot) + `(讨论)`,default = `0`}"
+                    android:text="@{StringUtil.numNarrow(movie.discussionHot),default = `0`}"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     android:textColor="@color/textO_on_white_body"
-                    app:drawableLeftCompat="@drawable/ic_hot"
-                    app:drawableTint="@color/textO_on_white_body" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@{StringUtil.numNarrow(movie.hot) + `(主题)`,default = `0`}"
-                    android:textColor="@color/textO_on_white_body"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
                     app:drawableLeftCompat="@drawable/ic_hot"
                     app:drawableTint="@color/textO_on_white_body" />
 
             </LinearLayout>
 
-            <LinearLayout
+            <View
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@{StringUtil.numNarrow(movie.searchHot) + `(搜索)`,default = `0`}"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                    android:textColor="@color/textO_on_white_body"
-                    app:drawableLeftCompat="@drawable/ic_hot"
-                    app:drawableTint="@color/textO_on_white_body" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@{StringUtil.numNarrow(movie.topicHot) + `(影响)`,default = `0`}"
-                    android:textColor="@color/textO_on_white_body"
-                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
-                    app:drawableLeftCompat="@drawable/ic_hot"
-                    app:drawableTint="@color/textO_on_white_body" />
-
-            </LinearLayout>
-
-
+                android:layout_height="2dp"
+                android:background="#50000000"/>
         </LinearLayout>
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="购票"
-            android:visibility="gone" />
 
     </LinearLayout>
 </layout>

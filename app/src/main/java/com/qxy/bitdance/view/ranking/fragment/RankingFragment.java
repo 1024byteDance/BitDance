@@ -18,40 +18,40 @@ import com.qxy.bitdance.databinding.FragmentMovieBinding;
 import com.qxy.bitdance.network.exception.ErrorConsumer;
 import com.qxy.bitdance.network.exception.NetException;
 import com.qxy.bitdance.view.ViewModelFactory;
-import com.qxy.bitdance.view.ranking.adapter.MovieAdapter;
+import com.qxy.bitdance.view.ranking.adapter.RankingAdapter;
 
 import io.reactivex.disposables.CompositeDisposable;
 
 //电影榜单Fragment
-public class MovieFragment extends Fragment {
+public class RankingFragment extends Fragment {
 
 
-    public static MovieFragment newInstance(int type, int version) {
-        return new MovieFragment(type, version);
+    public static RankingFragment newInstance(int type, int version) {
+        return new RankingFragment(type, version);
     }
 
     // 榜单版本 0 最新
     private final int version;
     private final int type;
 
-    public MovieFragment(int type, int version) {
+    public RankingFragment(int type, int version) {
         this.version = version;
         this.type = type;
     }
 
 
-    private MovieViewModel vm;
+    private RankingViewModel vm;
 
     private FragmentMovieBinding binding;
 
     private CompositeDisposable compositeDisposable;
 
-    private  MovieAdapter adapter;
+    private RankingAdapter adapter;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        vm = new ViewModelProvider(this, ViewModelFactory.provide(requireContext())).get(MovieViewModel.class);
+        vm = new ViewModelProvider(this, ViewModelFactory.provide(requireContext())).get(RankingViewModel.class);
         compositeDisposable = new CompositeDisposable();
         binding = FragmentMovieBinding.inflate(getLayoutInflater(), container, false);
         binding.swipeRefresh.setOnRefreshListener(this::list);
@@ -78,7 +78,7 @@ public class MovieFragment extends Fragment {
                         if (adapter == null) {
                             binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
                         }
-                        adapter = new MovieAdapter(rankItems,type);
+                        adapter = new RankingAdapter(rankItems,type);
                         adapter.setHasStableIds(true);
                         binding.recyclerView.setAdapter(adapter);
                     }

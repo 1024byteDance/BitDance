@@ -3,7 +3,7 @@ package com.qxy.bitdance.network.response;
 import com.google.gson.annotations.SerializedName;
 
 //抖音Api接口回调数据data项的基类
-public abstract class DouYinBaseData {
+public abstract class DouyinBaseData {
 
     // 错误码
     @SerializedName("error_code")

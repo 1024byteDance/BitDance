@@ -24,4 +24,18 @@ public class StringUtil {
             return String.format("%.1f万",l / 10000.0);
         }
     }
+
+    public static String arrayToStringTop5(String[] value) {
+        if (value == null) {
+            return "";
+        }
+        int i = 0;
+        StringBuilder sb = new StringBuilder();
+        while (i < 5 && i < value.length) {
+            sb.append(value[i ++]);
+            if (i != 5 && i != value.length)
+                sb.append("/");
+        }
+        return sb.toString();
+    }
 }

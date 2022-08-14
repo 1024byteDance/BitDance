@@ -7,7 +7,7 @@ import com.qxy.bitdance.database.domain.ClientToken;
 import com.qxy.bitdance.database.domain.RankItem;
 import com.qxy.bitdance.factory.NetWorkFactory;
 import com.qxy.bitdance.network.model.RankData;
-import com.qxy.bitdance.network.response.DouYinResponse;
+import com.qxy.bitdance.network.response.DouyinResponse;
 import com.qxy.bitdance.network.response.ResponseTransformer;
 import com.qxy.bitdance.network.service.RankService;
 
@@ -28,7 +28,7 @@ public class RankItemRepository implements RankItemDataSource {
 
     RankItemDao rankItemDao;
 
-    public RankItemRepository(ClientTokenDataSource clientTokenDataSource,RankItemDao rankItemDao) {
+    public RankItemRepository(ClientTokenDataSource clientTokenDataSource, RankItemDao rankItemDao) {
         this.clientTokenDataSource = clientTokenDataSource;
         this.rankItemDao = rankItemDao;
     }
@@ -42,7 +42,7 @@ public class RankItemRepository implements RankItemDataSource {
                     Retrofit retrofit = NetWorkFactory.provideRetrofit();
                     RankService rankService = retrofit.create(RankService.class);
                     // 根据是否需要版本号选择请求方式
-                    Observable<DouYinResponse<RankData<RankItem>>> observable
+                    Observable<DouyinResponse<RankData<RankItem>>> observable
                             = type == 0 ? rankService.getMovieRank(clientToken.getAccessToken(), type) // 获取最新
                             : rankService.getMovieRank(clientToken.getAccessToken(),type,version); // 根据版本号获取
                     return observable

@@ -11,12 +11,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.qxy.bitdance.databinding.FragmentRankBinding;
-import com.qxy.bitdance.view.ranking.FilmListActivity;
+import com.qxy.bitdance.view.ranking.RankingActivity;
 
 //榜单页面Fragment
 public class RankingFragment extends Fragment {
 
-    private FragmentRankBinding binding;
+    private FragmentRankBinding fragmentRankBinding;
 
     public static RankingFragment newInstance() {
         return new RankingFragment();
@@ -25,28 +25,42 @@ public class RankingFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentRankBinding.inflate(getLayoutInflater(),container,false);
+        fragmentRankBinding = FragmentRankBinding.inflate(getLayoutInflater(),container,false);
+        onClickFilm();
+        onClickTv();
+        onClickVariter();
+
+        return fragmentRankBinding.getRoot();
+    }
+
+    private void onClickFilm() {
         // 设置点击跳转电影榜单页面
-        binding.filmCardView.setOnClickListener((v) ->{
-            Intent intent = new Intent(requireContext(), FilmListActivity.class);
+        fragmentRankBinding.filmCardView.setOnClickListener((v) ->{
+            Intent intent = new Intent(requireContext(), RankingActivity.class);
+            intent.putExtra("type",1);
+            intent.putExtra("version",0);
             requireContext().startActivity(intent);
         });
+    }
+
+    private void onClickTv() {
         // 设置点击跳转电视剧榜单页面
-        binding.tvCardView.setOnClickListener((v) ->{
-            Intent intent = new Intent(requireContext(), FilmListActivity.class);
+        fragmentRankBinding.tvCardView.setOnClickListener((v) ->{
+            Intent intent = new Intent(requireContext(), RankingActivity.class);
             intent.putExtra("type",2);
             intent.putExtra("version",0);
             requireContext().startActivity(intent);
         });
+    }
 
+    private void onClickVariter() {
         // 设置点击跳转综艺榜单页面
-        binding.varietyCardView.setOnClickListener((v) ->{
-            Intent intent = new Intent(requireContext(), FilmListActivity.class);
+        fragmentRankBinding.varietrCardView.setOnClickListener((v) ->{
+            Intent intent = new Intent(requireContext(), RankingActivity.class);
             intent.putExtra("type",3);
             intent.putExtra("version",0);
             requireContext().startActivity(intent);
         });
-        return binding.getRoot();
     }
 
     @Override

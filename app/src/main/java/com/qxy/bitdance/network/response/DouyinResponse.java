@@ -3,7 +3,7 @@ package com.qxy.bitdance.network.response;
 import androidx.annotation.NonNull;
 
 //抖音Api接口回调实体类
-public class DouYinResponse<T extends DouYinBaseData> {
+public class DouyinResponse<T extends DouyinBaseData> {
 
     // 回调核心数据
     private T data;

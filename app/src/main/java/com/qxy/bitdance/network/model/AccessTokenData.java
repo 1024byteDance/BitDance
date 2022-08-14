@@ -3,10 +3,10 @@ package com.qxy.bitdance.network.model;
 import androidx.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
-import com.qxy.bitdance.network.response.DouYinBaseData;
+import com.qxy.bitdance.network.response.DouyinBaseData;
 
 //AccessToken请求回调data实体类
-public class AccessTokenData extends DouYinBaseData {
+public class AccessTokenData extends DouyinBaseData {
 
     // 接口调用凭证
     @SerializedName("access_token")

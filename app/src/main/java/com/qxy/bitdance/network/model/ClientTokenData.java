@@ -3,10 +3,10 @@ package com.qxy.bitdance.network.model;
 import androidx.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
-import com.qxy.bitdance.network.response.DouYinBaseData;
+import com.qxy.bitdance.network.response.DouyinBaseData;
 
 //ClientToken请求回调data实体类(client_access_token用于不需要用户授权就可以调用的接口。)
-public class ClientTokenData extends DouYinBaseData {
+public class ClientTokenData extends DouyinBaseData {
 
     // 接口调用凭证
     @SerializedName("access_token")

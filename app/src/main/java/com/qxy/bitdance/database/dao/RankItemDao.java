@@ -15,13 +15,13 @@ import androidx.room.Query;
 @Dao
 public interface RankItemDao {
 
-    @Query("select * from rankitem where type == :type and version == :version")
+    @Query("select * from RankItem where type == :type and version == :version")
     Maybe<List<RankItem>> queryMovie(int type, int version);
 
     @Insert
     Completable insert(List<RankItem> rankItems);
 
-    @Query("delete from rankitem where type == :type and version == :version")
+    @Query("delete from RankItem where type == :type and version == :version")
     Completable delete(int type, int version);
 
 }

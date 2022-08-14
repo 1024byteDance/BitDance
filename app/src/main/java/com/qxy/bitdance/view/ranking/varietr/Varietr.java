@@ -1,4 +1,4 @@
-package com.qxy.bitdance.view.ranking.variety;
+package com.qxy.bitdance.view.ranking.varietr;
 
 import android.view.View;
 
@@ -9,6 +9,7 @@ import com.qxy.bitdance.database.domain.RankItem;
 import com.qxy.bitdance.databinding.ListItemVarietrBinding;
 import com.qxy.bitdance.view.ranking.BaseRanking;
 
+//综艺榜单
 public class Varietr extends BaseRanking {
     ListItemVarietrBinding binding;
 

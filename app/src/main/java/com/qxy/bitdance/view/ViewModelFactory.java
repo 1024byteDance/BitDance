@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.qxy.bitdance.factory.RepositoryFactory;
-import com.qxy.bitdance.view.ranking.fragment.MovieViewModel;
+import com.qxy.bitdance.view.ranking.fragment.RankingViewModel;
 
 //ViewModel工厂类
 public class ViewModelFactory implements ViewModelProvider.Factory {
@@ -25,8 +25,8 @@ public class ViewModelFactory implements ViewModelProvider.Factory {
     @Override
     @NonNull
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        if (modelClass.isAssignableFrom(MovieViewModel.class)) {
-            return (T) new MovieViewModel(RepositoryFactory.providerRankItemRepository(context));
+        if (modelClass.isAssignableFrom(RankingViewModel.class)) {
+            return (T) new RankingViewModel(RepositoryFactory.providerRankItemRepository(context));
         }
         throw new IllegalArgumentException("Unknown ViewModel class");
     }

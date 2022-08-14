@@ -12,17 +12,17 @@ import com.qxy.bitdance.database.domain.RankItem;
 import com.qxy.bitdance.view.ranking.BaseRanking;
 import com.qxy.bitdance.view.ranking.movie.Movie;
 import com.qxy.bitdance.view.ranking.tv.Tv;
-import com.qxy.bitdance.view.ranking.variety.Varietr;
+import com.qxy.bitdance.view.ranking.varietr.Varietr;
 
 import java.util.List;
 
 //电影榜单适配器
-public class MovieAdapter extends RecyclerView.Adapter<BaseRanking>{
+public class RankingAdapter extends RecyclerView.Adapter<BaseRanking>{
 
     private final List<RankItem> dates;
     private final int type;
 
-    public MovieAdapter(List<RankItem> dates, int type) {
+    public RankingAdapter(List<RankItem> dates, int type) {
         this.dates = dates;
         this.type = type;
     }
@@ -60,6 +60,5 @@ public class MovieAdapter extends RecyclerView.Adapter<BaseRanking>{
     public long getItemId(int position) {
         return position;
     }
-
 
 }
