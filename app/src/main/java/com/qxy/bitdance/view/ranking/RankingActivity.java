@@ -46,6 +46,10 @@ public class RankingActivity extends AppCompatActivity {
             binding.layoutTextview.getBackground().setAlpha(0);
         }
 
+        binding.back.setOnClickListener(v -> {
+            finish();
+        });
+
         binding.toolbar.setBackgroundResource(i);
         Fragment fragment = RankingFragment.newInstance(type, version);
         getSupportFragmentManager()
