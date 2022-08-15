@@ -9,18 +9,21 @@
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/drawable/ic_img_load_fail.xml" value="0.2435" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/drawable/ic_launcher_background.xml" value="0.253" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.253" />
-        <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/activity_main.xml" value="0.3101160862354892" />
+        <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/activity_rank.xml" value="0.3101160862354892" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/activity_rank_top.xml" value="0.5588541666666667" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/activity_ranking.xml" value="0.3101160862354892" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/activity_ranking_util.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/fragment_me.xml" value="0.5588541666666667" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/fragment_movie.xml" value="0.29187396351575456" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/fragment_rank.xml" value="0.3101160862354892" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/fragment_ranking.xml" value="0.3101160862354892" />
-        <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/list_item_movie.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/list_item_movie.xml" value="0.33" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/list_item_tv.xml" value="0.29187396351575456" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/list_item_varietr.xml" value="0.28929765886287623" />
         <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/layout/list_item_variety.xml" value="0.5588541666666667" />
+        <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.319" />
+        <entry key="..\:/Users/Administrator/Desktop/BitDance/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.319" />
       </map>
     </option>
   </component>

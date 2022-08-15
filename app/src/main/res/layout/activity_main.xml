@@ -6,23 +6,81 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.main.MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:alpha="0">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.qxy.bitdance.view.main.fragment.MeFrament"
+        android:layout_marginBottom="62dp"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#FFFFFF"
+        app:layout_anchor="@+id/toolbar"
+        app:layout_anchorGravity="top|center" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_anchor="@+id/view_pager2"
+        app:layout_anchorGravity="bottom|center"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+            <!-- 我 -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/me_card_View"
+                style="@style/text_fill_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="我"></com.google.android.material.textview.MaterialTextView>
+
+            <!-- 抖音电影榜 -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/film_card_View"
+                style="@style/text_fill_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="电影">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <!-- 抖音电视榜 -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_card_View"
+                style="@style/text_fill_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="电视">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <!-- 抖音综艺榜 -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/varietr_card_View"
+                style="@style/text_fill_center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="综艺">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

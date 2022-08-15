@@ -1,5 +1,7 @@
 package com.qxy.bitdance.database.domain;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

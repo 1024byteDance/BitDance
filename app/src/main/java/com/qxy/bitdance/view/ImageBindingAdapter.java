@@ -24,7 +24,6 @@ public class ImageBindingAdapter {
             Glide.with(imageView.getContext())
                     .load(str)
                     .placeholder(new ColorDrawable(imageView.getContext().getResources().getColor(R.color.textO_on_white_body))) // 加载成功之前占位图
-                    .error(R.drawable.ic_img_load_fail) // 加载错误之后的错误图
                     .skipMemoryCache(false) // 是否跳过内存缓存
                     .transition(DrawableTransitionOptions.withCrossFade()) // 图片过渡效果
                     .centerCrop() // 指定图片的缩放类型为centerCrop

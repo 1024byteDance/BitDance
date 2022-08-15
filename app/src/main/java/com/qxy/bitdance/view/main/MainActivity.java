@@ -1,6 +1,7 @@
 package com.qxy.bitdance.view.main;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -14,6 +15,7 @@ import java.util.List;
 
 //主界面Activity
 public class MainActivity extends AppCompatActivity {
+    public static AppCompatActivity appCompatActivity;
 
     private ActivityMainBinding binding;
 
@@ -24,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        setSupportActionBar(binding.toolbar);
+        appCompatActivity = this;
+//        setSupportActionBar(binding.toolbar);
+
     }
 
     @Override

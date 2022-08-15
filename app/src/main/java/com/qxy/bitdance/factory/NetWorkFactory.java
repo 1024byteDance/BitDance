@@ -1,5 +1,6 @@
 package com.qxy.bitdance.factory;
 
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -10,11 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class NetWorkFactory {
 
     private static OkHttpClient provideOkHttpClient() {
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
-            @Override
-            public void log(String message) {
-                // 监听Http请求日志
-            }
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor((message) -> {
+            // 监听Http请求日志
         });
         //这行必须加 不然默认不打印
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
