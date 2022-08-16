@@ -12,12 +12,18 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <fragment
-        android:id="@+id/fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.qxy.bitdance.view.main.fragment.MeFrament"
-        android:layout_marginBottom="62dp"/>
+<!--    <fragment-->
+<!--        android:id="@+id/fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:name="com.qxy.bitdance.view.main.fragment.MeFrament"-->
+<!--        android:layout_marginBottom="62dp"/>-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:text="授权"/>
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"

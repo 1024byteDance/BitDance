@@ -46,6 +46,7 @@ public class RankingActivity extends AppCompatActivity {
             binding.layoutTextview.getBackground().setAlpha(0);
         }
 
+        //返回控件监听
         binding.back.setOnClickListener(v -> {
             finish();
         });

@@ -1,11 +1,16 @@
 package com.qxy.bitdance.view.main;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.bytedance.sdk.open.aweme.authorize.model.Authorization;
+import com.bytedance.sdk.open.douyin.DouYinOpenApiFactory;
+import com.bytedance.sdk.open.douyin.api.DouYinOpenApi;
 import com.qxy.bitdance.view.main.adapter.MainLayoutAdapter;
 import com.qxy.bitdance.view.main.fragment.RankingFragment;
 import com.qxy.bitdance.databinding.ActivityMainBinding;
@@ -15,7 +20,6 @@ import java.util.List;
 
 //主界面Activity
 public class MainActivity extends AppCompatActivity {
-    public static AppCompatActivity appCompatActivity;
 
     private ActivityMainBinding binding;
 
@@ -26,9 +30,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        appCompatActivity = this;
-//        setSupportActionBar(binding.toolbar);
-
+//        appCompatActivity = this;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            // 设置状态栏透明
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
     }
 
     @Override
